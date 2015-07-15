@@ -1,0 +1,47 @@
+<div class="container col-lg-6 col-md-6">
+	<div class="row">
+        <h1>ROT13 decoder</h1>
+    </div>
+	<div class="row">
+		<p class="col-xs-6 col-md-3">Text:</p>
+		<input class="col-xs-6" ng-model="query"/>
+    </div>
+	<div class="row">
+		<p class="col-xs-6 col-md-3">Decoded:</p>
+		<span class="col-xs-6">query | rot13</span>
+    </div>
+</div>
+<div class="container col-lg-6 col-md-6">
+	<div class="row">
+		<h1>Sum of char values</h1>
+    </div>
+	<div class="row">
+		<p class="col-xs-6 col-md-3">Text:</p>
+		<input class="col-xs-6" ng-model="query"/>
+    </div>
+	<div class="row">
+		<p class="col-xs-6 col-md-3">Use:</p>
+		<select class="col-xs-6" ng-model="sumType.id" 
+		    ng-selected="sumType.id"
+		    ng-change="typeChanged()"
+		    ng-options="sumType.id as sumType.type for sumType in this.sumTypes"
+		    required></select>
+    </div>
+	<div class="row">
+        <p class="col-xs-6 col-md-3">Sum of char values:</p>
+        <span class="col-xs-6">{{sumOfCharValues}}</span>
+    </div>
+	<div class="row">
+		<p class="col-xs-6 col-md-3">Sum of digits:</p>
+		<span class="col-xs-6">{{sumOfDigits}}</span>
+    </div>
+	<div class="row">
+        <p class="col-xs-6 col-md-3">Reduced to one digit:</p>
+        <span class="col-xs-6">{{reducedToOneDigit}}</span>
+    </div>
+</div>
+<!-- footer -->
+<br/>
+<br/>
+<br/>
+<a href="#/">Home</a>

@@ -1,0 +1,29 @@
+body {
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+
+div.control-group {
+  margin-bottom: 10px;
+}
+
+div.control-group label {
+  display: block;
+  width: 100px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+div.control-group div {
+  display: table-cell;
+}
+
+div.control-group input {
+  width: 100px;
+  font-size: medium;
+  padding: 3px;
+}
+
+div.control-group button{
+  font-size: medium;
+  margin-left: 10px;
+}
