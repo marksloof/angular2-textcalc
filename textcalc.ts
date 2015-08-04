@@ -2,8 +2,19 @@
 
 /* TextCalc class */
 
-class TextCalc {
-	
+function rot13Encrypt(s) {
+    if (s.toLowerCase() < 'a' || s.toLowerCase() > 'z')
+        return ' ';
+    else
+        return String.fromCharCode(s.charCodeAt(0) + (s.toLowerCase() < 'n' ? 13 : -13));
+};
+
+export class TextCalc {
+
+    rot13 = function (input) {
+        return (input == undefined) ? "" : input.split("").map(rot13Encrypt).join("");
+    }
+
 	sumOfCharValues = function (text, type) {
 		var sum = 0,
 			charValueA = "a".charCodeAt(0);
@@ -32,6 +43,7 @@ class TextCalc {
 			} else {
 				sum += s.toLowerCase().charCodeAt(0) - charValueA + 1;
 			}
+            return s;
 		});
 		return sum;
 	};
@@ -54,5 +66,3 @@ class TextCalc {
 	};
 
 };
-
-export default TextCalc;
